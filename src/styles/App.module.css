@@ -1,0 +1,33 @@
+.container{
+    background-color: #232323;
+    color:#e5e5e5;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+}
+
+.result{
+    background-color: #232323;
+    margin-top: 16px;
+    padding:0.50rem 1rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: all 0.4s;
+}
+.show{
+    opacity: 1;
+}
+.hidden{
+    opacity: 0;
+}
+
+.wrapperRow{
+    display: flex;
+}
+
+.borderGreen{
+    border:1px solid #acdf08;
+}
