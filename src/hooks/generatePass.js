@@ -14,13 +14,13 @@ const caracteres = [
 function getPass(passwordSize){
     let pass = ''
     let maxSize = passwordSize;
-    if(passwordSize <= 100 && passwordSize > 0){
-        for(let i=0;i <= maxSize;i++){
+    if(passwordSize <= 100 && passwordSize > 1){
+        for(let i=0;i < maxSize;i++){
             const randomIndex = Math.floor(Math.random() * caracteres.length);
             pass += caracteres[randomIndex];
         }        
     }else{
-        return "O tamanho da senha deve estar entre 1 e 100"
+        return "O tamanho da senha deve estar entre 2 e 100 caracteres"
     }
     
     return pass;
