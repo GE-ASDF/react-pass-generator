@@ -1,11 +1,13 @@
 .container{
     background-color: #232323;
     color:#e5e5e5;
-    height:100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     place-content: center;
+    overflow-y: auto;
+    margin:0 auto;
 }
 
 .result{
@@ -16,6 +18,10 @@
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     transition: all 0.4s;
+}
+.break{
+    line-break: anywhere;
+    max-width: 100%;
 }
 .show{
     opacity: 1;

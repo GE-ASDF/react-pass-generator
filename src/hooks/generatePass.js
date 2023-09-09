@@ -11,21 +11,25 @@ const caracteres = [
     '/', '?', '`', '~'
 ];
 
-function getPass(){
+function getPass(passwordSize){
     let pass = ''
-    let maxSize = 10;
-    for(let i=0;i <= maxSize;i++){
-        const randomIndex = Math.floor(Math.random() * caracteres.length);
-        pass += caracteres[randomIndex];
-    }        
+    let maxSize = passwordSize;
+    if(passwordSize <= 100 && passwordSize > 0){
+        for(let i=0;i <= maxSize;i++){
+            const randomIndex = Math.floor(Math.random() * caracteres.length);
+            pass += caracteres[randomIndex];
+        }        
+    }else{
+        return "O tamanho da senha deve estar entre 1 e 100"
+    }
     
     return pass;
 }
 
 export default function generatePass(){
     const [pass, setPass] = useState();
-    const setPassGenerated = ()=>{
-        setPass(()=>getPass())
+    const setPassGenerated = (passwordSize)=>{
+        setPass(()=>getPass(passwordSize))
     }
     return {pass, setPassGenerated};
 }
